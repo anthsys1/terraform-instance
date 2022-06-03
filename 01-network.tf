@@ -2,42 +2,42 @@ resource "aws_vpc" "main_vpc" {
   cidr_block = "10.0.0.0/16"
 
   tags = {
-    Name = "main_vpc_groupe3"
+    name = "main_vpc_groupe3"
   }
 }
 
-resource "aws_subnet" "SUBNET_PUBLIC" {
+resource "aws_subnet" "subnet_public" {
   vpc_id            = aws_vpc.main_vpc.id
   cidr_block        = "10.0.0.0/24"
 
   tags = {
-    Name = "SUBNET_PUBLIC"
+    name = "subnet_public"
   }
 }
 
-resource "aws_subnet" "SUBNET_PRIVATE_A" {
+resource "aws_subnet" "subnet_private_a" {
   vpc_id            = aws_vpc.main_vpc.id
   cidr_block        = "10.0.1.0/24"
 
   tags = {
-    Name = "SUBNET_PRIVATE_A"
+    name = "subnet_private_a"
   }
 }
 
-resource "aws_subnet" "SUBNET_PRIVATE_B" {
+resource "aws_subnet" "subnet_private_b" {
   vpc_id            = aws_vpc.main_vpc.id
   cidr_block        = "10.0.2.0/24"
 
   tags = {
-    Name = "SUBNET_PRIVATE_B"
+    name = "subnet_private_b"
   }
 }
 
-resource "aws_subnet" "SUBNET_PRIVATE_C" {
+resource "aws_subnet" "subnet_private_c" {
   vpc_id            = aws_vpc.main_vpc.id
   cidr_block        = "10.0.3.0/24"
 
   tags = {
-    Name = "SUBNET_PRIVATE_C"
+    name = "subnet_private_c"
   }
 }
